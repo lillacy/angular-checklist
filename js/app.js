@@ -11,7 +11,7 @@ app.controller('listCtrl', function($http, $timeout) {
 	checklist.loadingComplete = function(){
 	    $timeout(function () {
         	checklist.loading = false;
-	    }, 1000);
+	    }, 1500);
     };
     
 	checklist.openFile = function(file){
