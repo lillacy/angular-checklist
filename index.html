@@ -32,6 +32,9 @@
 		<!-- Dripicons Iconfont -->
 		<link rel="stylesheet" type="text/css" href="css/dripicons.css">
 		
+        <!-- Custom CSS -->
+		<link rel="stylesheet" type="text/css" href="css/loading-cube.css"/>
+        
 		<!-- Custom CSS -->
 		<link rel="stylesheet" type="text/css" href="css/styles.css"/>
 		
@@ -44,7 +47,16 @@
 		
 	</head>
 	<body ng-app="ChecklistApp" ng-controller="listCtrl as checklist" ng-init="checklist.openFile('list0.json');">
-		<div ng-show="checklist.loading">Loading...</div>
+    
+		<div class="loading-spinner" ng-show="checklist.loading">
+        	<div class="sk-folding-cube">
+              <div class="sk-cube1 sk-cube"></div>
+              <div class="sk-cube2 sk-cube"></div>
+              <div class="sk-cube4 sk-cube"></div>
+              <div class="sk-cube3 sk-cube"></div>
+            </div>
+            <span class="loading-text">Loading...</span>
+        </div>
 		
 		<div id="listContainer" ng-hide="checklist.loading" class="container-fluid">
 			<div class="row">
