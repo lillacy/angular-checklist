@@ -242,11 +242,11 @@
                     <div class="menuContents">
                         <table class="table table-striped">
                             <th>Title</th>
-                            <th class="text-right">Last Saved</th>
+                            <th class="text-right hide-on-xs">Last Saved</th>
                             <th></th>
                             <tr ng-repeat="x in checklist.recent.Lists">
                                 <td class="pointer" ng-click="checklist.openSavedFile(x.Filename);">{{ x.Title }}</td>
-                                <td class="text-right pointer" style="width:200px" ng-click="checklist.openSavedFile(x.Filename);">{{ x.Saved }}</td>
+                                <td class="text-right pointer hide-on-xs" style="width:200px" ng-click="checklist.openSavedFile(x.Filename);">{{ x.Saved }}</td>
                                 <td class="item-edit pointer" style="width:40px"><span class="glyphicon glyphicon-trash" ng-click="checklist.trashClicked(x.Filename, x.Title)"></span></td>
                             </tr>
                         </table>
