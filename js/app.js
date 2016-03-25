@@ -54,8 +54,6 @@ app.controller('listCtrl', function($http, $timeout) {
     checklist.editTitleSave = function(){
 	    if(!checklist.titleText == '' && checklist.titleText.length > 4){
 		    checklist.items.attr.title = checklist.titleText;
-		    //console.log(checklist.titleText.length);
-		    //console.log(checklist.items);
 		    checklist.titleText = '';
 		    checklist.editListTitle = false;
             checklist.saveCurrentList();
@@ -86,11 +84,13 @@ app.controller('listCtrl', function($http, $timeout) {
     };
     
     checklist.openSavedFile = function(file){
+	    checklist.loading = true;
         checklist.openFile(file);
         checklist.menuOpen = !checklist.menuOpen;
     };
     
     checklist.createNewList = function(){
+	    checklist.loading = true;
         checklist.openFile('list0.json');
         checklist.menuOpen = !checklist.menuOpen;
     };

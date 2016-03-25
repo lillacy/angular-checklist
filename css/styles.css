@@ -143,6 +143,8 @@ td.item-edit.pointer {
 #fileMenu.openMenu {
 	width: 100%;
 	color: white;
+	overflow-y: scroll;
+    overflow-x: hidden;
 }
 #menuIconContainer {
 	color: white;
@@ -244,6 +246,9 @@ input[type="checkbox"]:checked + label span {
 .menuContents table.table>tbody>tr>td {
 	border-bottom: 1px solid rgba(242,246,249,0.15);
 }
+table.table>tbody>tr:last-child >td {
+    border-bottom: none;
+}
 .btn-icon {
     font-size: 13px;
 }
@@ -290,5 +295,11 @@ td.item-reorder-edit span.pointer{
 @media (max-width: 360px) {
 	.hide-on-xxs {
 		display: none;
+	}
+	.menuContents table.table>tbody>tr>td{
+		max-width: 140px;
+		white-space: nowrap;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
 	}
 }
